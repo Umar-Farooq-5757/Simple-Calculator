@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(222, 26%, 31%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  color: #fff;
+  gap: 20px;
+}
+.dark {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 480px;
+  margin-inline: auto;
+  cursor: default;
+}
+header img {
+  filter: invert(1);
+  width: 30px;
+  cursor: pointer;
+}
+.dark header img {
+  filter: invert(0);
+}
+.screen {
+  width: 480px;
+  min-height: 90px;
+  background-color: hsl(224, 36%, 15%);
+  margin-inline: auto;
+  border-radius: 6px;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 48px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 24px;
+}
+.dark .screen {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+  border: 1px solid rgb(209, 209, 209);
+}
+.buttons {
+  width: 480px;
+  min-height: 480px;
+  background-color: hsl(223, 31%, 20%);
+  margin-inline: auto;
+  border-radius: 6px;
+  padding: 26px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+}
+.dark .buttons {
+  background-color: hsl(0, 5%, 81%);
+}
+.btn {
+  background-color: hsl(30, 25%, 89%);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 32px;
+  font-weight: bold;
+  color: hsl(221, 14%, 31%);
+  cursor: pointer;
+  box-shadow: 0 6px 1px 1px hsl(28, 16%, 65%);
+}
+.dark .btn {
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0 6px 1px 1px hsl(35, 11%, 61%);
+}
+.btn:active {
+  transform: scale(0.95);
+}
+.buttons .btn:nth-child(17),
+.buttons .btn:nth-child(18) {
+  grid-column: span 2;
+  font-size: 28px;
+}
+#equals {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0 6px 1px 1px hsl(6, 70%, 34%);
+  color: white;
+  font-size: 32px;
+}
+#reset,
+#del {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 6px 1px 1px hsl(224, 28%, 35%);
+  color: #fff;
+}
+.dark #reset,
+.dark #del {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 6px 1px 1px hsl(185, 58%, 25%);
+}
+.dark #equals {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0 6px 1px 1px hsl(25, 99%, 27%);
+}
+
+@media (max-width: 530px) {
+  header {
+    width: 350px;
+  }
+  .screen {
+    width: 350px;
+    font-size: 40px;
+    padding: 0 24px;
+    height: 10px;
+  }
+  .buttons {
+    width: 350px;
+    padding: 16px;
+    grid-gap: 20px;
+  }
+  .btn {
+    font-size: 32px;
+    padding: 0;
+  }
+}
+@media (max-width: 370px) {
+  header {
+    width: 300px;
+  }
+  .screen {
+    width: 300px;
+    font-size: 40px;
+    padding: 0 24px;
+    height: 10px;
+  }
+  .buttons {
+    width: 300px;
+    padding: 16px;
+    grid-gap: 20px;
+  }
+      .btn {
+    font-size: 24px;
+    padding: 0;
+  }
+}
