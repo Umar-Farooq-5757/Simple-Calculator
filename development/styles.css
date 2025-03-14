@@ -127,6 +127,7 @@ header img {
     width: 350px;
     padding: 16px;
     grid-gap: 20px;
+      min-height: 380px;
   }
   .btn {
     font-size: 32px;
@@ -147,6 +148,7 @@ header img {
     width: 300px;
     padding: 16px;
     grid-gap: 20px;
+      min-height: 320px;
   }
       .btn {
     font-size: 24px;
